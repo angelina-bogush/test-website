@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
     <link rel="stylesheet" href="./index.css">
+    <script src="./array.js" defer></script>
+    <script src="./index.js" defer></script>
 </head>
 <body class="page">
     <header class="header">
@@ -22,16 +24,16 @@
                     <a class="header__link" href="#">Пальмы и юкки</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#">Розы</a>
+                    <a class="header__link" href="#">Бонсай</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="content">
       <section class="category category_cactuses" id="cactuses">
         <h2 class="category__title">Кактусы и суккуленты</h2>
-        <div class="category__container">
-        <article class="card">
+        <div class="category__container category__container_cactuses">
+        <!--<article class="card">
             <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
             <div class="card__description">
             <p class="card__name">Алоэ Аристата</p>
@@ -77,31 +79,42 @@
                 </figure>
         </article>
         <article class="card"></article>
-        <article class="card"></article>
+        <article class="card"></article>-->
     </div>
       </section>
       <section class="category category_orhideys" id="orhideys">
         <h2 class="category__title">Орхидеи</h2>
-        <div class="category__container">
+        <div class="category__container category__container_orhideys">
         
         </div>
       </section>
       <section class="category category_palms" id="palms">
         <h2 class="category__title">Пальмы и юкки</h2>
-        <div class="category__container">
+        <div class="category__container category__container_palms">
         
         </div>
       </section>
-      <section class="category category_roses" id="roses">
-        <h2 class="category__title">Розы</h2>
-        <div class="category__container">
+      <section class="category category_roses" id="bonsai">
+        <h2 class="category__title">Бонсай</h2>
+        <div class="category__container category__container_bonsai">
         
         </div>
       </section>
 
     </main>
     <footer></footer>
-    <div class="popup"></div>
+    <div class="popup">
+        <div class="popup__container">
+            <h3 class="popup__title"></h3>
+            <button aria-label="Кнопка закрыть" class="popup__close-icon" type="button"></button>
+            <img class="popup__image" src="./images/aloe.webp" alt="">
+            <form class="form form_add-card" name="edit-profile">
+                <input class="form__input form__input_theme_name-card" type="text" name="name" placeholder="Название">
+                <input class="form__input form__input_theme_link" type="text" name="description" placeholder="Ссылка на картинку">
+                <button class="form__button form__button_create" type="submit">Купить</button>
+        </form>
+    </div>
+    </div>
     <template id="template-card">
         <article class="card">
             <p class="card__date"></p>
