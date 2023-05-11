@@ -4,10 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" src="./index.css">
+    <title>Plants</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body class="page">
-    
+    <header class="header">
+        <img class="header__logo" src="./images/free-icon-house-plants-9765032.png" alt="Логотип сайта">
+        <nav>
+            <ul class="header__list">
+                <li>
+                    <a class="header__link" href="#">Кактусы и суккуленты</a>
+                </li>
+                <li>
+                    <a class="header__link" href="#">Орхидеи</a>
+                </li>
+                <li>
+                    <a class="header__link" href="#">Пальмы и юкки</a>
+                </li>
+                <li>
+                    <a class="header__link" href="#">Розы</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="category category_cactuses" id="cactuses">
+        <h2 class="category__title">Кактусы и суккуленты</h2>
+        <div class="category__container">
+        <article class="card">
+            <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
+            <div class="card__description">
+            <p class="card__name">Алоэ Аристата</p>
+            <p class="card__price">1250</p>
+            </div>
+            <button class="card__button" type="button">Купить</button>
+        </article>
+        <article class="card">
+            <figure>
+                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
+                <figcaption class="card__description"><p>Кактус цереус</p>
+                    <b>1250</b>
+                </figure>
+        </article>
+        <article class="card">
+            <figure>
+                <img class="card__image" src="./images/cereus.webp" alt="Кактус Цереус">
+                <figcaption class="card__description">Кактус цереус</figcaption>
+                </figure>
+        </article>
+        <article class="card">
+            <figure>
+                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
+                <figcaption class="card__description">Алоэ Аристата</figcaption>
+                </figure>
+        </article>
+        <article class="card">
+            <figure>
+                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
+                <figcaption class="card__description">Алоэ Аристата</figcaption>
+                </figure>
+        </article>
+        <article class="card">
+            <figure>
+                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
+                <figcaption class="card__description">Алоэ Аристата</figcaption>
+                </figure>
+        </article>
+        <article class="card">
+            <figure>
+                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
+                <figcaption class="card__description">Алоэ Аристата</figcaption>
+                </figure>
+        </article>
+        <article class="card"></article>
+        <article class="card"></article>
+    </div>
+      </section>
+      <section class="category category_orhideys" id="orhideys">
+        <h2 class="category__title">Орхидеи</h2>
+        <div class="category__container">
+        
+        </div>
+      </section>
+      <section class="category category_palms" id="palms">
+        <h2 class="category__title">Пальмы и юкки</h2>
+        <div class="category__container">
+        
+        </div>
+      </section>
+      <section class="category category_roses" id="roses">
+        <h2 class="category__title">Розы</h2>
+        <div class="category__container">
+        
+        </div>
+      </section>
+
+    </main>
+    <footer></footer>
+    <div class="popup"></div>
+    <template id="template-card">
+        <article class="card">
+            <p class="card__date"></p>
+            <img class="card__image" src="" alt="">
+            <div class="card__description">
+            <p class="card__name"></p>
+            <p class="card__price"></p>
+            </div>
+            <button class="card__button" type="button">Купить</button>
+        </article>
+    </template>
 </body>
 </html>
