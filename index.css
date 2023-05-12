@@ -5,7 +5,7 @@
 .page{
 }
 .header{
-padding: 25px 200px;
+padding: 20px 200px;
 background-color: darkolivegreen;
 display: flex;
 justify-content: center;
@@ -28,6 +28,9 @@ color:beige;
 text-decoration: none;
 font-size: 18px;
 }
+.header__link:hover{
+    opacity:0.5;
+}
 .header__logo{
     width:50px;
   
@@ -37,6 +40,12 @@ font-size: 18px;
     flex-direction: column;
     gap: 30px;
     padding: 0 50px 50px;
+}
+.content__heading{
+    text-align: center;
+    font-size: 38px;
+    font-style: italic;
+    padding-top: 20px;
 }
 .category{
 margin: 0 auto;
@@ -62,6 +71,7 @@ width:100%;
 height:350px;
 object-fit:cover;
 border-radius: 50px 50px 0 0;
+cursor: pointer;
 }
 .card__description{
 display: flex;
@@ -116,14 +126,16 @@ padding: 10px 30px;
     position: relative;
     box-sizing: border-box;
     padding: 45px 60px;
-   outline: 1px solid red;
-   display: flex;
-   flex-direction: column;
+   display: grid;
+   /* flex-direction: column; */
+   grid-template-columns: repeat(2, 1fr);
    gap: 25px;
+   max-height: 500px;
+   max-width: 600px;
     
 }
 .popup__title{
-
+grid-column: 1/2;
 }
 .popup__close-icon{
     background-image: url("./images/free-icon-cross-mark-17047.png");
@@ -146,12 +158,14 @@ padding: 10px 30px;
     height:300px;
     object-fit: cover;
     width: 100%;
+    grid-column: 1/2;
 }
 .popup__price{
     text-align: center;
+    grid-column: 1/2;
 }
 .categories{
-    box-shadow: 0 0 10px rgba(30, 166, 96, 0.3);
+box-shadow: 0 0 10px rgba(30, 166, 96, 0.3);
 border-radius: 50px;
 padding: 50px;
 background-color: #f8faf7;
@@ -165,3 +179,75 @@ background-color: #f8faf7;
     font-size: 24px;
     color: black;
 text-decoration: none;}
+
+.categories__link:hover{
+    opacity:0.5;
+}
+
+.button-up{ 
+     background-image: url('./images/free-icon-up-chevron-7604793.png'); 
+     position: fixed;
+     right: 30px;
+     bottom: 20px;
+     width: 60px;
+     height: 60px;
+     background-size: 100%;
+     border: none;
+     background-color: transparent;
+     display:none;
+}
+.button-up:hover{
+    opacity: 0.5;
+}
+.button-up_active{
+display:block;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+     /* gap:20px;  */
+    grid-column: 2/3;
+    align-items: center;
+}
+.form__radio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-bottom:30px;
+}
+.form__button{
+margin-top: auto;
+background-color:seagreen;
+    color: white;
+    border-radius: 50px;
+padding:5px 20px;
+border: none;
+transition: 0.6s;
+grid-column: 2/3;
+
+}
+.form__button:hover{
+    background-color:seagreen;
+    box-shadow: 0 0 10px rgba(30, 166, 96, 0.3);
+border-radius: 50px;
+color: black;
+background-color: #f8faf7;
+}
+.form__title{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.form__input-comment{
+    padding: 8px;
+}
+.form__info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form__number{
+    align-self: flex-start;
+    padding:0 20px 5px;
+}
+  
