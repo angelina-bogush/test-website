@@ -11,20 +11,20 @@
 </head>
 <body class="page">
     <header class="header">
-        <img class="header__logo" src="./images/free-icon-house-plants-9765032.png" alt="Логотип сайта">
+        <img class="header__logo" src="./images/free-icon-cactus-10510995.png" alt="Логотип сайта">
         <nav>
             <ul class="header__list">
                 <li>
-                    <a class="header__link" href="#">Кактусы и суккуленты</a>
+                    <a class="header__link" href="#cactuses">Кактусы и суккуленты</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#">Орхидеи</a>
+                    <a class="header__link" href="#orhideys">Орхидеи</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#">Пальмы и юкки</a>
+                    <a class="header__link" href="#palms">Пальмы и юкки</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#">Бонсай</a>
+                    <a class="header__link" href="#bonsai">Бонсай</a>
                 </li>
             </ul>
         </nav>
@@ -100,17 +100,25 @@
         
         </div>
       </section>
+      <section class="categories">
+        <ul class="categories__list">
+            <li><a class="categories__link" href="#cactuses">Кактусы и суккуленты</a></li>
+            <li><a class="categories__link" href="#orhideys">Орхидеи</a></li>
+            <li><a class="categories__link" href="#palms">Пальмы и юкки</a></li>
+            <li> <a class="categories__link" href="#bonsai">Бонсай</a></li>
+        </ul>
+      </section>
 
     </main>
     <footer></footer>
-    <div class="popup">
+    <div class="popup popup_opened">
         <div class="popup__container">
             <h3 class="popup__title"></h3>
             <button aria-label="Кнопка закрыть" class="popup__close-icon" type="button"></button>
-            <img class="popup__image" src="./images/aloe.webp" alt="">
+            <img class="popup__image" src="" alt="">
+            <p class="popup__price"></p>
             <form class="form form_add-card" name="edit-profile">
-                <input class="form__input form__input_theme_name-card" type="text" name="name" placeholder="Название">
-                <input class="form__input form__input_theme_link" type="text" name="description" placeholder="Ссылка на картинку">
+                <input class="form__input form__input_theme_name-card" type="text" name="name" placeholder="Количество">
                 <button class="form__button form__button_create" type="submit">Купить</button>
         </form>
     </div>

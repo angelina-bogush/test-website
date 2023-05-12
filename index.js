@@ -9,6 +9,7 @@ const popup = document.querySelector('.popup');
 const popupCloseIcon = popup.querySelector('.popup__close-icon');
 const popupImage = popup.querySelector('.popup__image');
 const popupTitle = popup.querySelector('.popup__title');
+const popupPrice = popup.querySelector('.popup__price');
 
 const openPopup = function (){
     popup.classList.add('popup_opened');
@@ -28,13 +29,16 @@ const createCard = function(array){                   //создание нов�
     //newCardData.textContent = cardsContent['data'];
     newCardPrice.textContent = array['price'];
 
-    const clickCard = function(array){
-        popupImage.src = array['link'];
-        popupImage.alt = array['name'];
-        popupTitle.textContent = array['name'];
+    const clickCard = function(arrayLink, arrayName, arrayPrice){
+        popupImage.src = arrayLink;
+        popupImage.alt = arrayName;
+        popupTitle.textContent = arrayName;
+        popupPrice.textContent = `Стоимость:  ${arrayPrice}`;
         openPopup()
           }
- newCardImage.addEventListener('click', clickCard);
+ newCardImage.addEventListener('click', function (){
+    clickCard(array['link'], array['name'], array['price'])
+ });
     return newCard;
 }
 
