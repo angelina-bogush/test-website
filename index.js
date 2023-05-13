@@ -13,9 +13,13 @@ const popupCloseIcon = popup.querySelector(".popup__close-icon");
 const popupImage = popup.querySelector(".popup__image");
 const popupTitle = popup.querySelector(".popup__title");
 const popupPrice = popup.querySelector(".popup__price");
+const popupDate = popup.querySelector('.popup__date');
 const buttonUp = page.querySelector(".button-up");
 const formButtonBuy = popup.querySelector('.form__button');
-
+const popupForm = page.querySelector('.form');
+const buttonTheme = page.querySelector('.button-theme');
+const buttonLightTheme = page.querySelector('.header__button_light');
+const buttonDarkTheme = page.querySelector('.header__button_dark');
 
 const openPopup = function () {
   popup.classList.add("popup_opened");
@@ -24,32 +28,46 @@ const closePopup = function () {
   popup.classList.remove("popup_opened");
 };
 
+const clickCard = function (arrayLink, arrayName, arrayPrice, arrayDate) {
+    popupImage.src = arrayLink;
+    popupImage.alt = arrayName;
+    popupTitle.textContent = arrayName;
+    popupPrice.textContent = `Стоимость:  ${arrayPrice}`;
+    popupDate.textContent = arrayDate;
+    openPopup();
+
+  };
+
+  function getDayInfo(dateString) {
+    const date = new Date(dateString);
+     const options = {  month: 'long', weekday: 'long', year: 'numeric', week: 'numeric' };
+  const formatter = new Intl.DateTimeFormat('ru-RU', options);
+   const formattedDate = formatter.format(date);
+        return formattedDate.replace(/(\d+)\s/, '$1 неделя ');
+   }
+
+const reverseDate = function(arrayData){
+return arrayData.split('.').reverse().join('-')
+}
 const createCard = function (array) {
                                                                        //создание новой карточки
   const newCard = cardTemplate.querySelector(".card").cloneNode(true);
   const newCardName = newCard.querySelector(".card__name");
   const newCardPrice = newCard.querySelector(".card__price");
   const newCardImage = newCard.querySelector(".card__image");
-  const newCardData = newCard.querySelector(".card__data");
+  const newCardDate = newCard.querySelector(".card__date");
   const newCardButton = newCard.querySelector(".card__button");
   newCardName.textContent = array["name"];
   newCardImage.src = array["link"];
   newCardImage.alt = array["name"];
-  //newCardData.textContent = cardsContent['data'];
+  newCardDate.textContent = getDayInfo(reverseDate(array['data']));
   newCardPrice.textContent = array["price"];
 
-  const clickCard = function (arrayLink, arrayName, arrayPrice) {
-    popupImage.src = arrayLink;
-    popupImage.alt = arrayName;
-    popupTitle.textContent = arrayName;
-    popupPrice.textContent = `Стоимость:  ${arrayPrice}`;
-    openPopup();
-  };
   newCardButton.addEventListener("click", function () {
-    clickCard(array["link"], array["name"], array["price"]);
+    clickCard(array["link"], array["name"], array["price"], array["data"]);
   });
   newCardImage.addEventListener("click", function () {
-    clickCard(array["link"], array["name"], array["price"]);
+    clickCard(array["link"], array["name"], array["price"], array["data"]);
   });
   return newCard;
 };
@@ -80,7 +98,8 @@ popupCloseIcon.addEventListener("click", () => {
 //кнопка купить
 const buyItem = function(){
 closePopup();
-alert('Поздравляем с покупкой!')
+alert('Поздравляем с покупкой!');
+popupForm.reset();
 }
 formButtonBuy.addEventListener('click', buyItem)
 
@@ -105,4 +124,14 @@ buttonUp.addEventListener('click', () => {
     )
 })                                                
 
+const changeThemeLight = function(){
+    page.classList.remove('dark');
+    buttonUp.classList.remove('button-up_dark');
+    }
+ const changeThemeDark = function(){
+        page.classList.add('dark');
+        buttonUp.classList.add('button-up_dark');
+        }
 
+buttonLightTheme.addEventListener('click', changeThemeLight)
+buttonDarkTheme.addEventListener('click', changeThemeDark)

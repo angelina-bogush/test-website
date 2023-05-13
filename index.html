@@ -28,6 +28,13 @@
                 </li>
             </ul>
         </nav>
+        <div class="header__theme">
+            <button class="header__button" type="button">Сменить тему</button>
+            <div class="header__theme-content">
+                <button class='header__button_dark'type="button">Темная</button>
+                <button class="header__button_light" type="button">Светлая</button>
+            </div>
+        </div>
     </header>
     <main class="content">
     <h1 class="content__heading">Тропические растения для вашего дома</h1>
@@ -131,23 +138,23 @@
                 </div>
                 <p class="form__number">Количество:</p> 
                 <div class="form__info">
-                <input class="form__input-number" type="text" name="number"placeholder="Вводите цифры">
-                <input class="form__input-comment" type="text" name="comment" placeholder="Комментарий">
-                <!-- <button class="form__button" type="submit">Купить</button> -->
+                <input class="form__input-number"  required type="text" name="number"placeholder="Количество" pattern="[0-9]">
+                <input class="form__input-comment" type="text" name="comment">
+                 <button class="form__button" type="submit">Купить</button>
             </div>
             </form>
             <p class="popup__price"></p>
-            <button class="form__button" type="submit">Купить</button>
+            <p class="popup__date"></p>
         </div>
     </div>
     <template id="template-card">
         <article class="card">
-            <p class="card__date"></p>
             <img class="card__image" src="" alt="">
             <div class="card__description">
             <p class="card__name"></p>
             <p class="card__price"></p>
             </div>
+            <p class="card__date"></p>
             <button class="card__button" type="button">Купить</button>
         </article>
     </template>

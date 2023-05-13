@@ -3,6 +3,11 @@
     padding: 0;
 }
 .page{
+    background-color: white;
+}
+.page.dark{
+    background-color: black;
+    color: white;
 }
 .header{
 padding: 20px 200px;
@@ -35,6 +40,30 @@ font-size: 18px;
     width:50px;
   
 }
+.header__theme{
+    position: relative;
+  
+}
+.header__theme-content{
+    display: none;
+    position: absolute;
+
+}
+.header__theme-content button{
+background-color: transparent;
+color: beige;
+}
+.header__theme:hover .header__theme-content{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+.header__button{
+    color: beige;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+}
 .content{
     display: flex;
     flex-direction: column;
@@ -66,6 +95,7 @@ border-radius: 50px;
 display: flex;
 flex-direction: column;
 }
+
 .card__image{
 width:100%;
 height:350px;
@@ -98,6 +128,9 @@ padding: 10px 30px;
 .card__button:hover{
     background-color:seagreen;
     color: white;
+}
+.card__date{
+    text-align: center;
 }
 
 .popup{
@@ -132,10 +165,11 @@ padding: 10px 30px;
    gap: 25px;
    max-height: 500px;
    max-width: 600px;
-    
+    color: black;
 }
 .popup__title{
 grid-column: 1/2;
+color: black;
 }
 .popup__close-icon{
     background-image: url("./images/free-icon-cross-mark-17047.png");
@@ -164,6 +198,10 @@ grid-column: 1/2;
     text-align: center;
     grid-column: 1/2;
 }
+.popup__date{
+    font-style: italic;
+    text-align: center;
+}
 .categories{
 box-shadow: 0 0 10px rgba(30, 166, 96, 0.3);
 border-radius: 50px;
@@ -175,10 +213,6 @@ background-color: #f8faf7;
     display: flex;
     justify-content: space-around;
 }
-.categories__link{
-    font-size: 24px;
-    color: black;
-text-decoration: none;}
 
 .categories__link:hover{
     opacity:0.5;
@@ -199,6 +233,11 @@ text-decoration: none;}
 .button-up:hover{
     opacity: 0.5;
 }
+.button-up_dark{
+    background-color: white;
+    border-radius: 50%;
+     height: 60px;
+}
 .button-up_active{
 display:block;
 }
@@ -209,6 +248,7 @@ display:block;
     grid-column: 2/3;
     align-items: center;
 }
+
 .form__radio{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -250,4 +290,11 @@ background-color: #f8faf7;
     align-self: flex-start;
     padding:0 20px 5px;
 }
-  
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+}
+a.dark{
+color: white;
+}
