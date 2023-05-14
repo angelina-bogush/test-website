@@ -28,27 +28,85 @@ const closePopup = function () {
   popup.classList.remove("popup_opened");
 };
 
+//   function getDayInfo(dateString) {
+//     const date = new Date(dateString);
+//     const dayOfWeek = getDayOfWeek(date.getDay());
+//     const weekNumber = getMonthWeekNumber(date);
+//     const month = getMonthName(date.getMonth());
+//     const year = date.getFullYear();
+//      return `${dayOfWeek}, ${weekNumber} неделя ${month} ${year} года`;
+//   }
+//   function getDayOfWeek(day) {
+//     const daysOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+//     return daysOfWeek[day];
+//   }
+  
+//   function getMonthWeekNumber(date) {
+//     const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+//     const firstMondayOfMonth = new Date(firstDayOfMonth);
+//     firstMondayOfMonth.setDate(firstMondayOfMonth.getDate() + ((1 - firstDayOfMonth.getDay() + 7) % 7));
+//     const weekNumber = Math.floor((date.getDate() - firstMondayOfMonth.getDate()) / 7) + 1;
+//     return weekNumber;
+//   }
+  
+  
+//   function getMonthName(month) {
+//     const monthNames = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+//                       "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+//     return monthNames[month];
+//   }
+  
+     function getDayInfo(dateString) {
+       const date = new Date(dateString);
+       const options = {
+         weekday: "long",
+         week: "numeric",
+         month: "long",
+         year: "numeric",
+       };
+       const formatter = new Intl.DateTimeFormat("ru-RU", options);
+       const formattedDate = formatter.format(date);
+       const parts = formattedDate.split(" ");
+       const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+       const firstMondayOfMonth = new Date(firstDayOfMonth);
+       firstMondayOfMonth.setDate(
+         firstMondayOfMonth.getDate() + ((1 - firstDayOfMonth.getDay() + 7) % 7)
+       );
+       const weekNumber =
+         Math.floor((date.getDate() - firstMondayOfMonth.getDate()) / 7) + 1;
+       const monthsGenitive = [
+         "января",
+         "февраля",
+         "марта",
+         "апреля",
+         "мая",
+         "июня",
+         "июля",
+         "августа",
+         "сентября",
+         "октября",
+         "ноября",
+         "декабря",
+       ];
+       const monthIndex = date.getMonth();
+       const monthGenitive = monthsGenitive[monthIndex];
+       const result = `${parts[3]}, ${weekNumber} неделя ${monthGenitive} ${parts[1]} года`;
+       return result;
+     }
+
+const reverseDate = function(arrayData){
+return arrayData.split('.').reverse().join('-')
+}
 const clickCard = function (arrayLink, arrayName, arrayPrice, arrayDate) {
     popupImage.src = arrayLink;
     popupImage.alt = arrayName;
     popupTitle.textContent = arrayName;
     popupPrice.textContent = `Стоимость:  ${arrayPrice}`;
-    popupDate.textContent = arrayDate;
+    popupDate.textContent = getDayInfo(arrayDate);
     openPopup();
 
   };
 
-  function getDayInfo(dateString) {
-    const date = new Date(dateString);
-     const options = {  month: 'long', weekday: 'long', year: 'numeric', week: 'numeric' };
-  const formatter = new Intl.DateTimeFormat('ru-RU', options);
-   const formattedDate = formatter.format(date);
-        return formattedDate.replace(/(\d+)\s/, '$1 неделя ');
-   }
-
-const reverseDate = function(arrayData){
-return arrayData.split('.').reverse().join('-')
-}
 const createCard = function (array) {
                                                                        //создание новой карточки
   const newCard = cardTemplate.querySelector(".card").cloneNode(true);
@@ -101,7 +159,7 @@ closePopup();
 alert('Поздравляем с покупкой!');
 popupForm.reset();
 }
-formButtonBuy.addEventListener('click', buyItem)
+popupForm.addEventListener('submit', buyItem)
 
 //кнопка скролла наверх
 const showButtonUp = function () {

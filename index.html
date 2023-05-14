@@ -31,8 +31,8 @@
         <div class="header__theme">
             <button class="header__button" type="button">Сменить тему</button>
             <div class="header__theme-content">
-                <button class='header__button_dark'type="button">Темная</button>
-                <button class="header__button_light" type="button">Светлая</button>
+                <a class="header__button-link header__button_dark">Темная</a>
+                <a class="header__button-link header__button_light">Светлая</a>
             </div>
         </div>
     </header>
@@ -41,53 +41,7 @@
       <section class="category category_cactuses" id="cactuses">
         <h2 class="category__title">Кактусы и суккуленты</h2>
         <div class="category__container category__container_cactuses">
-        <!--<article class="card">
-            <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
-            <div class="card__description">
-            <p class="card__name">Алоэ Аристата</p>
-            <p class="card__price">1250</p>
-            </div>
-            <button class="card__button" type="button">Купить</button>
-        </article>
-        <article class="card">
-            <figure>
-                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
-                <figcaption class="card__description"><p>Кактус цереус</p>
-                    <b>1250</b>
-                </figure>
-        </article>
-        <article class="card">
-            <figure>
-                <img class="card__image" src="./images/cereus.webp" alt="Кактус Цереус">
-                <figcaption class="card__description">Кактус цереус</figcaption>
-                </figure>
-        </article>
-        <article class="card">
-            <figure>
-                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
-                <figcaption class="card__description">Алоэ Аристата</figcaption>
-                </figure>
-        </article>
-        <article class="card">
-            <figure>
-                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
-                <figcaption class="card__description">Алоэ Аристата</figcaption>
-                </figure>
-        </article>
-        <article class="card">
-            <figure>
-                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
-                <figcaption class="card__description">Алоэ Аристата</figcaption>
-                </figure>
-        </article>
-        <article class="card">
-            <figure>
-                <img class="card__image" src="./images/aloe.webp" alt="Алоэ">
-                <figcaption class="card__description">Алоэ Аристата</figcaption>
-                </figure>
-        </article>
-        <article class="card"></article>
-        <article class="card"></article>-->
+       
     </div>
       </section>
       <section class="category category_orhideys" id="orhideys">
@@ -119,7 +73,7 @@
     <button class="button-up" type="button"></button>
     </main>
     <footer></footer>
-    <div class="popup popup_opened">
+    <div class="popup">
         <div class="popup__container">
             <h3 class="popup__title"></h3>
             <button aria-label="Кнопка закрыть" class="popup__close-icon" type="button"></button>
@@ -127,19 +81,19 @@
             <form class="form form_add-card" name="popup-form">
                 <p class="form__title">Цвет кашпо</p>
                 <div class="form__radio">
-                    <input type="radio" name="choose-color" value="brown" id="color-brown">
+                    <input type="radio" name="choose-color" value="brown" id="color-brown" required>
                     <label for="color-brown">Коричневый</label>
-                    <input type="radio" name="choose-color" value="white" id="color-white">
+                    <input type="radio" name="choose-color" value="white" id="color-white" required>
                     <label for="color-white">Белый</label>
-                    <input type="radio" name="choose-color" value="grey" id="color-grey">
+                    <input type="radio" name="choose-color" value="grey" id="color-grey" required>
                     <label for="color-grey">Серый</label>
-                    <input type="radio" name="choose-color" value="red" id="color-red">
+                    <input type="radio" name="choose-color" value="red" id="color-red" required>
                     <label for="color-red">Красный</label>
                 </div>
                 <p class="form__number">Количество:</p> 
                 <div class="form__info">
-                <input class="form__input-number"  required type="text" name="number"placeholder="Количество" pattern="[0-9]">
-                <input class="form__input-comment" type="text" name="comment">
+                <input class="form__input-number"  required type="number" name="number" placeholder="Количество" min="0">
+                <input class="form__input-comment" type="text" name="comment" placeholder="Комментарий" maxlength="2000">
                  <button class="form__button" type="submit">Купить</button>
             </div>
             </form>

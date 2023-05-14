@@ -3,19 +3,19 @@ const arrayCactuses = [
         name: "Эхеверия Рундели",
         link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/b66/400_600_2/b668bb8d8f2a5b642a053ebed07f1b60.webp',
         price: '1050',
-        data: '01.05.2023'
+        data: '10.02.2023'
     },
     {
         name: "Эуфорбия Мамиллярис",
         link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/e1a/400_600_2/e1a99aabfe63a9d399d4a4633f01019d.webp',
         price: '1000',
-        data: '02.05.2023'
+        data: '05.01.2023'
     },
     {
         name: 'Кактус Микс',
         link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/db2/400_600_2/db2e7b60670c4d43a9cb0ec8e209a920.webp',
         price: '1430',
-        data: '03.05.2023'
+        data: '06.12.2023'
     },
     {
         name: 'Каланхоэ Орикула ',
@@ -51,7 +51,7 @@ const arrayCactuses = [
         name: 'Седум Сталя',
         link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/db0/400_600_2/db01d237a7b3f72de530d2219d73a425.webp',
         price: '300',
-        data: '01.04.2023'
+        data: '15.04.2023'
     },
     {
         name: 'Сенецио Роуленаус',
@@ -204,13 +204,13 @@ const arrayBonsai = [
         name: "Араукария",
         link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/c0c/400_600_2/c0c2304f5b6d5b53cbdb4800c32ff027.webp',
         price: '1000',
-        data: '01.05.2023'
+        data: '30.11.2023'
     },
     {
         name: 'Кармона',
         link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/529/400_600_2/5290b7b79b7e1046cc8e0423d48cf8c4.webp',
         price: '1430',
-        data: '01.05.2023'
+        data: '25.12.2023'
     },
     {
         name: "Фикус Микрокарпа",

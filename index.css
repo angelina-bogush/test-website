@@ -47,22 +47,29 @@ font-size: 18px;
 .header__theme-content{
     display: none;
     position: absolute;
+    left: -8px;
+    top: 20px;
+}
 
-}
-.header__theme-content button{
-background-color: transparent;
-color: beige;
-}
 .header__theme:hover .header__theme-content{
     display: flex;
-    flex-direction: column;
-    z-index: 2;
+  max-width: 200px;
+  gap: 10px;
+  background-color: rgba(0,0,0,.3);
 }
 .header__button{
     color: beige;
     background-color: transparent;
     border: none;
     font-size: 17px;
+}
+.header__button-link{
+cursor: pointer;
+font-size: 18px;
+color: white;
+}
+.header__button-link:hover{
+opacity: 0.5;
 }
 .content{
     display: flex;
@@ -131,6 +138,8 @@ padding: 10px 30px;
 }
 .card__date{
     text-align: center;
+    font-size: 14px;
+    color: gray;
 }
 
 .popup{
