@@ -5,6 +5,9 @@ const cardContainerCactuses = page.querySelector(
 const cardContainerOrhideys = page.querySelector(
   ".category__container_orhideys"
 );
+let screenWidth = window.innerWidth;
+const header = page.querySelector('.header');
+headerLinks = page.querySelectorAll('.header__link');
 const cardContainerPalms = page.querySelector(".category__container_palms");
 const cardContainerBonsai = page.querySelector(".category__container_bonsai");
 const cardTemplate = page.querySelector("#template-card").content;
@@ -17,9 +20,11 @@ const popupDate = popup.querySelector('.popup__date');
 const buttonUp = page.querySelector(".button-up");
 const formButtonBuy = popup.querySelector('.form__button');
 const popupForm = page.querySelector('.form');
-const buttonTheme = page.querySelector('.button-theme');
-const buttonLightTheme = page.querySelector('.header__button_light');
-const buttonDarkTheme = page.querySelector('.header__button_dark');
+const toggleButton = page.querySelector('.header__change-theme');
+const toggleButtonText = page.querySelector('.header__theme-text');
+const headerBag = page.querySelector('.header__bag');
+const menuButton = page.querySelector('.header__menu-button');
+const menu = page.querySelector('.header__list');
 
 const openPopup = function () {
   popup.classList.add("popup_opened");
@@ -182,14 +187,23 @@ buttonUp.addEventListener('click', () => {
     )
 })                                                
 
-const changeThemeLight = function(){
-    page.classList.remove('dark');
-    buttonUp.classList.remove('button-up_dark');
-    }
  const changeThemeDark = function(){
-        page.classList.add('dark');
-        buttonUp.classList.add('button-up_dark');
+        page.classList.toggle('dark');
+        buttonUp.classList.toggle('button-up_dark');
+        header.classList.toggle('dark');
+        headerLinks.forEach((link) => {
+            link.classList.toggle('dark');})
+        toggleButtonText.classList.toggle('dark');
+        headerBag.classList.toggle('dark')
         }
+toggleButton.addEventListener('click', changeThemeDark);
 
-buttonLightTheme.addEventListener('click', changeThemeLight)
-buttonDarkTheme.addEventListener('click', changeThemeDark)
+menuButton.addEventListener('click', function() {
+ if (menu.style.display === 'flex' && screenWidth <= 768) {
+      menu.style.display = 'none';
+    }
+    else {
+      menu.style.display = 'flex';
+    }
+});
+  

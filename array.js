@@ -12,14 +12,14 @@ const arrayCactuses = [
         data: '05.01.2023'
     },
     {
-        name: 'Кактус Микс',
-        link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/db2/400_600_2/db2e7b60670c4d43a9cb0ec8e209a920.webp',
+        name: 'Кактус цветущий',
+        link: 'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-5-img.jpg',
         price: '1430',
         data: '06.12.2023'
     },
     {
         name: 'Каланхоэ Орикула ',
-        link: 'https://miltoniya.ru/upload/resize_cache/webp/iblock/984/400_600_2/9847b6f5de1abd6b98aff6eaf8862fba.webp',
+        link: 'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-9-img.jpg',
         price: '920',
         data: '10.05.2023'
     },

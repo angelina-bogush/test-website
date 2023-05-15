@@ -11,33 +11,41 @@
 </head>
 <body class="page">
     <header class="header">
-        <img class="header__logo" src="./images/free-icon-cactus-10510995.png" alt="Логотип сайта">
-        <nav>
+        <img class="header__logo" src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h2-logo-1.png" alt="Логотип сайта">
+        <nav class="header__nav">
             <ul class="header__list">
                 <li>
-                    <a class="header__link" href="#cactuses">Кактусы и суккуленты</a>
+                    <a class="header__link" href="#">Главная</a>
+                </li>
+                <li>
+                    <a class="header__link" href="#cactuses">Кактусы</a>
                 </li>
                 <li>
                     <a class="header__link" href="#orhideys">Орхидеи</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#palms">Пальмы и юкки</a>
+                    <a class="header__link" href="#palms">Пальмы</a>
                 </li>
                 <li>
                     <a class="header__link" href="#bonsai">Бонсай</a>
                 </li>
+                <li>
+                    <a class="header__link" href="#">Поиск по названию</a>
+                </li>
             </ul>
+            <button class="header__bag" type="button"></button>
+            <button class = "header__menu-button" type="button"></button>
+            <div class="header__theme">
+                <input type="checkbox" id="toggle-button" class="header__change-theme">
+                <label for="toggle-button" class="header__theme-text">Сменить тему</label>
+              </div>
         </nav>
-        <div class="header__theme">
-            <button class="header__button" type="button">Сменить тему</button>
-            <div class="header__theme-content">
-                <a class="header__button-link header__button_dark">Темная</a>
-                <a class="header__button-link header__button_light">Светлая</a>
-            </div>
-        </div>
     </header>
     <main class="content">
-    <h1 class="content__heading">Тропические растения для вашего дома</h1>
+        <div class="content__block">
+            <h1 class="content__heading">Тропические растения для вашего дома</h1>
+            <p class="content__text">Цветы вдохновляют нас на создание незабываемых воспоминаний. Наши цветы сделают Ваши воспоминания особенными.</p>
+        </div>
       <section class="category category_cactuses" id="cactuses">
         <h2 class="category__title">Кактусы и суккуленты</h2>
         <div class="category__container category__container_cactuses">
@@ -104,10 +112,10 @@
     <template id="template-card">
         <article class="card">
             <img class="card__image" src="" alt="">
-            <div class="card__description">
             <p class="card__name"></p>
-            <p class="card__price"></p>
-            </div>
+            <div class="card__price-container"><p class="card__price"></p> 
+            <img class="card__ruble" src="./images/icons8-рубль-24.png"> </div>
+            
             <p class="card__date"></p>
             <button class="card__button" type="button">Купить</button>
         </article>
