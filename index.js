@@ -7,7 +7,8 @@ const cardContainerOrhideys = page.querySelector(
 );
 let screenWidth = window.innerWidth;
 const header = page.querySelector('.header');
-headerLinks = page.querySelectorAll('.header__link');
+const headerLinks = page.querySelectorAll('.header__link');
+const categoriesLinks = page.querySelectorAll('.categories__link');
 const cardContainerPalms = page.querySelector(".category__container_palms");
 const cardContainerBonsai = page.querySelector(".category__container_bonsai");
 const cardTemplate = page.querySelector("#template-card").content;
@@ -194,7 +195,10 @@ buttonUp.addEventListener('click', () => {
         headerLinks.forEach((link) => {
             link.classList.toggle('dark');})
         toggleButtonText.classList.toggle('dark');
-        headerBag.classList.toggle('dark')
+        headerBag.classList.toggle('dark');
+        categoriesLinks.forEach((link) => {
+            link.classList.toggle('dark')
+        })
         }
 toggleButton.addEventListener('click', changeThemeDark);
 
