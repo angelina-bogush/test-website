@@ -425,6 +425,7 @@ html {
     background-color: rgb(8, 57, 2);
 }
 
+
 @media (max-width:1024px) {
     .category__container {
         grid-template-columns: repeat(4, 1fr);
@@ -490,14 +491,14 @@ html {
         font-size: 12px;
         max-width: 250px;
     }
-
     .header__link {
         font-size: 10px;
     }
 
     .form__radio {
-        font-size: 12px;
+        font-size: 10px;
         gap: 2px;
+        padding: 0
     }
 
     .form__input-comment {
@@ -521,12 +522,17 @@ html {
     .popup__title {
         text-align: center;
     }
-
     .popup__container {
         grid-template-columns: 250px;
         padding: 15px 30px;
         gap: 5px;
         justify-items: center;
+        max-width: 300px;
+    }
+    .popup__image {
+        width: 200px;
+        height: 200px;
+        background-position: 100%;
     }
 
 }
@@ -590,12 +596,6 @@ html {
     .button-up {
         width: 35px;
         height: 35px;
-    }
-
-    .popup__image {
-        width: 200px;
-        height: 200px;
-        background-position: 100%;
     }
 
     .content__block {
