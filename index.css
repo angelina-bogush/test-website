@@ -14,6 +14,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 24px;
+    color: black;
 }
 
 .page.dark {
@@ -209,6 +210,7 @@ html {
     opacity: 0;
     pointer-events: none;
     transition: .6s;
+    color: black;
 }
 
 .popup_opened {
@@ -326,6 +328,7 @@ html {
     flex-direction: column;
     grid-column: 2/3;
     align-items: center;
+
 }
 
 .form__radio {
