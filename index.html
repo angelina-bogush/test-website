@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
     <script src="./array.js" defer></script>
     <script src="./index.js" defer></script>
 </head>
 <body class="page">
     <header class="header">
+        <div class="header__container">
         <img class="header__logo" src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h2-logo-1.png" alt="Логотип сайта">
         <nav class="header__nav">
             <ul class="header__list">
-                <li>
-                    <a class="header__link" href="#">Главная</a>
-                </li>
                 <li>
                     <a class="header__link" href="#cactuses">Кактусы</a>
                 </li>
@@ -29,19 +28,16 @@
                 <li>
                     <a class="header__link" href="#bonsai">Бонсай</a>
                 </li>
-                <li>
-                    <a class="header__link" href="#">Поиск по названию</a>
-                </li>
             </ul>
-            <button class="header__bag" type="button"></button>
-            <button class = "header__menu-button" type="button"></button>
             <div class="header__theme">
                 <input type="checkbox" id="toggle-button" class="header__change-theme">
-                <label for="toggle-button" class="header__theme-text">Сменить тему</label>
+                <label for="toggle-button" class="header__theme-text">Тема</label>
               </div>
         </nav>
+    </div>
     </header>
     <main class="content">
+        <div class="content__container">
         <div class="content__block">
             <h1 class="content__heading">Тропические растения для вашего дома</h1>
             <p class="content__text">Цветы вдохновляют нас на создание незабываемых воспоминаний. Наши цветы сделают Ваши воспоминания особенными.</p>
@@ -77,10 +73,10 @@
             <li><a class="categories__link" href="#palms">Пальмы и юкки</a></li>
             <li> <a class="categories__link" href="#bonsai">Бонсай</a></li>
         </ul>
-      </section>
+    </section>
     <button class="button-up" type="button"></button>
+</div>
     </main>
-    <footer></footer>
     <div class="popup">
         <div class="popup__container">
             <h3 class="popup__title"></h3>
@@ -89,13 +85,13 @@
             <form class="form form_add-card" name="popup-form">
                 <p class="form__title">Цвет кашпо</p>
                 <div class="form__radio">
-                    <input type="radio" name="choose-color" value="brown" id="color-brown" required>
+                    <input  class= "form__radio-button" type="radio" name="choose-color" value="brown" id="color-brown" required>
                     <label for="color-brown">Коричневый</label>
-                    <input type="radio" name="choose-color" value="white" id="color-white" required>
+                    <input class= "form__radio-button" type="radio" name="choose-color" value="white" id="color-white" required>
                     <label for="color-white">Белый</label>
-                    <input type="radio" name="choose-color" value="grey" id="color-grey" required>
+                    <input class= "form__radio-button" type="radio" name="choose-color" value="grey" id="color-grey" required>
                     <label for="color-grey">Серый</label>
-                    <input type="radio" name="choose-color" value="red" id="color-red" required>
+                    <input class= "form__radio-button" type="radio" name="choose-color" value="red" id="color-red" required>
                     <label for="color-red">Красный</label>
                 </div>
                 <p class="form__number">Количество:</p> 
