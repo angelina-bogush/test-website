@@ -165,7 +165,6 @@ const closePopup = function () {
      link.classList.toggle("dark");
    });
    toggleButtonText.classList.toggle("dark");
-   headerBag.classList.toggle("dark");
    categoriesLinks.forEach((link) => {
      link.classList.toggle("dark");
    });
