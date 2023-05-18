@@ -35,6 +35,7 @@ const closePopup = function () {
 //функция даты
  function getDayInfo(dateString) {
    const date = new Date(dateString);
+   console.log(dateString);
    const options = {
      weekday: "long",
      week: "numeric",
@@ -67,7 +68,8 @@ const closePopup = function () {
    ];
    const monthIndex = date.getMonth();
    const monthGenitive = monthsGenitive[monthIndex];
-   const result = `${parts[3]}, ${weekNumber} неделя ${monthGenitive} ${parts[1]} года`;
+   const weekDay = parts[3];
+   const result = `${weekDay}, ${weekNumber} неделя ${monthGenitive} ${parts[1]} года`;
    return result;
  }
 //редактирую дату под стандарт ISO
@@ -80,7 +82,7 @@ const closePopup = function () {
    popupImage.alt = arrayName;
    popupTitle.textContent = arrayName;
    popupPrice.textContent = `Стоимость:  ${arrayPrice}`;
-   popupDate.textContent = getDayInfo(arrayDate);
+   popupDate.textContent = getDayInfo(reverseDate(arrayDate));
    openPopup();
  };
 
@@ -97,7 +99,9 @@ const closePopup = function () {
    newCardImage.alt = array["name"];
    newCardDate.textContent = getDayInfo(reverseDate(array["data"]));
    newCardPrice.textContent = array["price"];
-
+   newCardButton.addEventListener("touchstart", function () {
+    clickCard(array["link"], array["name"], array["price"], array["data"]);
+  });
    newCardButton.addEventListener("click", function () {
      clickCard(array["link"], array["name"], array["price"], array["data"]);
    });

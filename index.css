@@ -11,7 +11,7 @@ html {
 
 .page {
     background-color: #fffffa;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 15px;
     line-height: 24px;
     color: black;
@@ -162,6 +162,7 @@ html {
 .card__price-container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .card__ruble {
@@ -471,6 +472,7 @@ html {
 
     .category__title {
         font-size: 20px;
+        text-align: center;
     }
 
     .card__image {
@@ -495,7 +497,7 @@ html {
         max-width: 250px;
     }
     .header__link {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .form__radio {
@@ -587,7 +589,7 @@ html {
     }
 
     .header__link {
-        font-size: 6px;
+        font-size: 8px;
     }
 }
 
@@ -603,5 +605,8 @@ html {
 
     .content__block {
         padding-top: 10px;
+    }
+    .header__link {
+        font-size: 6px;
     }
 }
